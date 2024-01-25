@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Light.eot');
+    src: local('Forma DJR Micro Light'), local('FormaDJRMicro-Light'),
+        url('FormaDJRMicro-Light.eot?#iefix') format('embedded-opentype'),
+        url('FormaDJRMicro-Light.woff2') format('woff2'),
+        url('FormaDJRMicro-Light.woff') format('woff'),
+        url('FormaDJRMicro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Regular.eot');
+    src: local('Forma DJR Micro Regular'), local('FormaDJRMicro-Regular'),
+        url('FormaDJRMicro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FormaDJRMicro-Regular.woff2') format('woff2'),
+        url('FormaDJRMicro-Regular.woff') format('woff'),
+        url('FormaDJRMicro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

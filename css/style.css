@@ -1,0 +1,263 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+  font-family: "Forma DJR Micro";
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  position: relative;
+}
+body button.focus,
+.btn:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+ul,
+ol,
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none !important;
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+}
+.main_header {
+  width: 100%;
+  text-align: center;
+  padding: 60px 0px;
+}
+.main_header h2 {
+  color: #000;
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main_header h2 span {
+  text-transform: lowercase;
+}
+
+.bottom_line {
+  width: 100%;
+  height: 15px;
+  margin-top: 40px;
+  background: linear-gradient(45deg, #d4649f 0%, #faa418 145%);
+}
+.video_main {
+  background: url(../images/r_bg.png) no-repeat center/cover;
+  background-position: center bottom;
+  margin: 0 auto;
+  height: 100vh;
+}
+.video_box {
+  position: relative;
+  height: 100vh;
+}
+.video_box video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.registration_main {
+  background: url(../images/r_bg.png) no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.registration_box {
+  padding: 40px;
+  text-align: center;
+}
+
+.registration_box .form_box {
+  position: relative;
+  z-index: 1;
+}
+.registration_box .form_box .row {
+  margin: 0 -10px;
+}
+.registration_box .form_box .row > div {
+  padding: 0 10px;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.form-control,
+.btn {
+  background: #cccccc8d;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 14px;
+  color: #4d4d4d;
+  padding: 5px 12px;
+  height: auto;
+}
+.btn {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #d4649f 0%, #faa418 145%);
+  border: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 14px;
+  color: #fff;
+  padding: 5px 12px;
+  height: auto;
+  text-transform: uppercase;
+}
+.btn.btn-round {
+  border-radius: 6px 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.btn .icon_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration_box .btn {
+  border-radius: 0 0 6px 6px;
+  padding: 4px 25px;
+  text-transform: uppercase;
+}
+.registration_box .form_box label {
+  font-size: 22px;
+  color: #fff;
+  max-width: 220px;
+  line-height: normal;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.offers_main {
+  background: url(../images/o_bg.png) no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.offers_main .offer_title h1 {
+  text-align: center;
+  background: linear-gradient(45deg, #d4649f 0%, #faa418 145%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.offers_main .offer_cashback h2 {
+  color: #000;
+  margin: 0px;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.offers_main .offer_benefits {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.offers_main .offer_benefits .r_box,
+.offers_main .offer_benefits .l_box {
+  padding: 10px;
+}
+.offers_main .offer_benefits .l_box {
+  border-left: 1px solid;
+}
+
+.offers_main .offer_benefits img {
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.offers_main .offer_benefits h2 {
+  color: #000;
+  margin: 0px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.offers_main .offer_moto h2 {
+  color: #000;
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.offers_main .offer_t_and_c {
+  margin-bottom: -40px;
+}
+.offers_main .offer_t_and_c p {
+  color: #000;
+  margin: 0px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.n_main {
+  background: url(../images/n_bg.png) no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.n_main .store {
+  padding: 10px;
+}
+
+.n_main .store h1 {
+  text-align: center;
+  background: linear-gradient(45deg, #d4649f 0%, #faa418 145%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0px;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.n_main .store p {
+  color: #000;
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
