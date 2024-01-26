@@ -188,14 +188,24 @@ export class HomeComponent implements OnInit {
           console.log('position', position);
           let longitude = position.coords.longitude;
           let latitude = position.coords.latitude;
-          // longitude = 77.5795817;
-          // latitude = 12.9171254;
+          // longitude = 85.1371701;
+          // latitude = 25.6099081;
           this.app_service
             .reverseGeocoding(longitude, latitude)
             .subscribe((res: any) => {
               console.log(res);
               res.features.forEach((item: any) => {
-                if (item.place_type.includes('region')) {
+                // if (item.place_type.includes('region')) {
+                //   console.log('State', item.text);
+                //   this.state = item.text.toLowerCase();
+                //   console.log('state = >', this.state);
+                // }
+                if (item.place_type.includes('place')) {
+                  console.log('State', item.text);
+                  this.state = item.text.toLowerCase();
+                  console.log('state = >', this.state);
+                }
+                if (item.place_type.includes('district')) {
                   console.log('State', item.text);
                   this.state = item.text.toLowerCase();
                   console.log('state = >', this.state);

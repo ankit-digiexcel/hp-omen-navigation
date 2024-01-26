@@ -142,7 +142,7 @@
     <p>Allow location access</p>
   </div>
 
-  <div *ngIf="state === 'karnataka'">
+  <div *ngIf="state.includes('bengaluru')">
     <div class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8599703630425!2d77.58810587546797!3d12.916720216078323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156236429b37%3A0x41f8e366cfb58812!2sOmen%20Playground%20by%20HP!5e0!3m2!1sen!2sin!4v1706269906582!5m2!1sen!2sin"
@@ -165,7 +165,7 @@
     </div>
   </div>
 
-  <div *ngIf="state === 'west bengal'">
+  <div *ngIf="state.includes('kolkata')">
     <div class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3243776307577!2d88.35231487563068!3d22.566968133176058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a8f780c6b1%3A0xf699aee2dedf2dfe!2sOMEN%20Playground%20(HP%20World)!5e0!3m2!1sen!2sin!4v1706269966068!5m2!1sen!2sin"
@@ -174,13 +174,114 @@
     </div>
     <div class="store">
       <h1>Nearest OMEN PLAYGROUND Store</h1>
-      <p *ngIf="state === 'west bengal'">Omen Playground Store, 1st floor, SHOP NO 115, near 6, Chittaranjan Ave,
+      <p>Omen Playground Store, 1st floor, SHOP NO 115, near 6, Chittaranjan Ave,
         Kolkata,
         West Bengal 700072</p>
     </div>
     <div class="text-center">
       <a
         href="https://www.google.com/maps/dir//1st+floor,+OMEN+Playground+(HP+World),+SHOP+NO+115,+near+6,+Chittaranjan+Ave,+Kolkata,+West+Bengal+700072/@22.5669681,88.3523149,17z/data=!4m17!1m7!3m6!1s0x3a0277a8f780c6b1:0xf699aee2dedf2dfe!2sOMEN+Playground+(HP+World)!8m2!3d22.5669632!4d88.3548898!16s%2Fg%2F11y22t3241!4m8!1m0!1m5!1m1!1s0x3a0277a8f780c6b1:0xf699aee2dedf2dfe!2m2!1d88.3548898!2d22.5669632!3e9?entry=ttu"><button
+          type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
+              height="18px" style="margin-right: 10px;" alt="">start
+            navigation</span></button></a>
+    </div>
+  </div>
+
+  <div *ngIf="state.includes('jodhpur') || state.includes('nagaur')">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.4469925827625!2d73.01222527569553!3d26.27960568701066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418d97ecf0e8eb%3A0x7543659062da0fc0!2sManglam%20The%20Mighty%20Empire!5e0!3m2!1sen!2sin!4v1706299646548!5m2!1sen!2sin"
+        width="100%" height="300" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+    <div class="store">
+      <h1>Nearest OMEN PLAYGROUND Store</h1>
+      <p>Manglam The Mighty Empire, Plot No. 200, First C ROAD, Sardarpura, Jodhpur, Rajasthan</p>
+    </div>
+    <div class="text-center">
+      <a
+        href="https://www.google.com/maps/dir//Manglam+The+Mighty+Empire,+Gole+Bldg+Rd,+opp.+Shivalik+Complex,+Sardarpura,+Jodhpur,+Rajasthan+342001/@27.348018,73.8373489,8z/data=!4m9!4m8!1m0!1m5!1m1!1s0x39418d97ecf0e8eb:0x7543659062da0fc0!2m2!1d73.0148002!2d26.2796009!3e9?entry=ttu"><button
+          type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
+              height="18px" style="margin-right: 10px;" alt="">start
+            navigation</span></button></a>
+    </div>
+  </div>
+  <div *ngIf="state.includes('jaipur') || state.includes('sikar')">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d889.4090020878011!2d75.75041106960941!3d26.915044694375112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db400fe9d173d%3A0xaf70daa2e23db13e!2sHandi!5e0!3m2!1sen!2sin!4v1706300553369!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="store">
+      <h1>Nearest OMEN PLAYGROUND Store</h1>
+      <p>WELLWIN, Shop No 1, Plot No 178,Vashali Marg, Nemi Sagar Colony,Vashali Nagar, Opp Handi Restaurant - Jaipur,
+        Rajasthan</p>
+    </div>
+    <div class="text-center">
+      <a
+        href="https://www.google.com/maps/dir//362,+Handi,+Vaishali+Marg,+Nemi+Sagar+Colony,+D+-+Block,+Hanuman+Nagar,+Jaipur,+Rajasthan+302021/@27.6732216,75.85431,9z/data=!4m9!4m8!1m0!1m5!1m1!1s0x396db400fe9d173d:0xaf70daa2e23db13e!2m2!1d75.7510561!2d26.9150943!3e9?entry=ttu"><button
+          type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
+              height="18px" style="margin-right: 10px;" alt="">start
+            navigation</span></button></a>
+    </div>
+  </div>
+
+  <div *ngIf="state.includes('chandigarh') || state.includes('fatehabad')">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.930079908093!2d76.77506807582536!3d30.720365986229858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0040000001%3A0x8d82bea087332102!2sHP%20World!5e0!3m2!1sen!2sin!4v1706300886377!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="store">
+      <h1>Nearest OMEN PLAYGROUND Store</h1>
+      <p>G.K.Enterprises - Hybrid Store, Sco:10, Sector 20D, Chandigarh</p>
+    </div>
+    <div class="text-center">
+      <a
+        href="https://www.google.com/maps/dir//S.C.O+52,+Gr.+Flr,+HP+World,+Computer+Mkt,+20C,+Sector+20,+Chandigarh,+160020/@29.6018156,75.8703156,8z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390fed0040000001:0x8d82bea087332102!2m2!1d76.7771155!2d30.7170287!3e9?entry=ttu"><button
+          type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
+              height="18px" style="margin-right: 10px;" alt="">start
+            navigation</span></button></a>
+    </div>
+  </div>
+
+  <div *ngIf="state.includes('darjeeling') || state.includes('siliguri')">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.68653426662!2d88.42544947570748!3d26.722459468240338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4410a48f15c3f%3A0x59038c4f1689c7d7!2sBazar%20Kolkata!5e0!3m2!1sen!2sin!4v1706301215904!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="store">
+      <h1>Nearest OMEN PLAYGROUND Store</h1>
+      <p>HP WORLD, Sevoke Road oppo lic Building 1st Floor Near Bazar Kolkata Siliguri, 734001, West Bengal</p>
+    </div>
+    <div class="text-center">
+      <a
+        href="https://www.google.com/maps/dir//Bldg,+156,+Bazar+Kolkata,+Millennium+Centre,+1,+Sevoke+Rd,+opp.+LIC,+Ward+13,+Punjabi+Para,+Siliguri,+West+Bengal+734001/@26.7224595,88.4254495,17z/data=!4m18!1m8!3m7!1s0x39e4410a48f15c3f:0x59038c4f1689c7d7!2sBazar+Kolkata!8m2!3d26.7224547!4d88.4280244!15sCmJIUCBXT1JMRCwgU2V2b2tlIFJvYWQgb3BwbyBsaWMgQnVpbGRpbmcgMXN0IEZsb29yIE5lYXIgQmF6YXIgS29sa2F0YSBTaWxpZ3VyaSwgNzM0MDAxLCBXZXN0IEJlbmdhbCIDiAEBkgEOY2xvdGhpbmdfc3RvcmXgAQA!16s%2Fg%2F11n918hcc5!4m8!1m0!1m5!1m1!1s0x39e4410a48f15c3f:0x59038c4f1689c7d7!2m2!1d88.4280244!2d26.7224547!3e9?entry=ttu"><button
+          type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
+              height="18px" style="margin-right: 10px;" alt="">start
+            navigation</span></button></a>
+    </div>
+  </div>
+
+  <div *ngIf=" state.includes('patna')">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.8497616930995!2d85.13717007567779!3d25.609908114860243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed59519ac0522b%3A0x6b0b60efcc2a2d9e!2sCOMPUTER%20BAZARE!5e0!3m2!1sen!2sin!4v1706301402517!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="store">
+      <h1>Nearest OMEN PLAYGROUND Store</h1>
+      <p>COMPUTER BAZAR, OPG PATNA S.P Verma Road, Opposite pista house Patna, 800001, Bihar</p>
+    </div>
+    <div class="text-center">
+      <a
+        href="https://www.google.com/maps/dir//COMPUTER+BAZARE,+shop+no.1+Dutta+building,+SP+Verma+Rd,+near+fedral+bank,+Old+Jakkanpur,+Lodipur,+Patna,+Bihar+800001/@25.6099081,85.1371701,17z/data=!4m18!1m8!3m7!1s0x39ed59519ac0522b:0x6b0b60efcc2a2d9e!2sCOMPUTER+BAZARE!8m2!3d25.6099033!4d85.139745!15sClNDT01QVVRFUiBCQVpBUiwgT1BHIFBBVE5BIFMuUCBWZXJtYSBSb2FkLCBPcHBvc2l0ZSBwaXN0YSBob3VzZSBQYXRuYSwgODAwMDAxLCBCaWhhciIDiAEBkgERZWxlY3Ryb25pY3Nfc3RvcmXgAQA!16s%2Fg%2F11j48gq84l!4m8!1m0!1m5!1m1!1s0x39ed59519ac0522b:0x6b0b60efcc2a2d9e!2m2!1d85.139745!2d25.6099033!3e9?entry=ttu"><button
           type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
               height="18px" style="margin-right: 10px;" alt="">start
             navigation</span></button></a>
