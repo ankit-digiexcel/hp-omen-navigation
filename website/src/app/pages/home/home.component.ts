@@ -11,6 +11,7 @@ import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 })
 export class HomeComponent implements OnInit {
   public is_iphone: boolean = false;
+  public permission_denied: boolean = false;
   public states: any = [];
   public state: string = '';
   public is_submiting_entry: boolean = false;
@@ -42,12 +43,12 @@ export class HomeComponent implements OnInit {
     private form_builder: FormBuilder,
     private app_service: AppService
   ) {
+    this.getLocation();
     const platform = navigator.platform.toLowerCase();
     this.is_iphone = platform.includes('iphone');
     // this.to_navigation_page();
     this.app_service.getStates().subscribe((states: any) => {
       this.states = this.sortByName(states);
-      console.log(this.states);
     });
   }
 
@@ -185,22 +186,25 @@ export class HomeComponent implements OnInit {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           console.log('position', position);
+          let longitude = position.coords.longitude;
+          let latitude = position.coords.latitude;
+          // longitude = 77.5795817;
+          // latitude = 12.9171254;
           this.app_service
-            .reverseGeocoding(
-              position.coords.longitude,
-              position.coords.latitude
-            )
+            .reverseGeocoding(longitude, latitude)
             .subscribe((res: any) => {
               console.log(res);
               res.features.forEach((item: any) => {
                 if (item.place_type.includes('region')) {
                   console.log('State', item.text);
                   this.state = item.text.toLowerCase();
+                  console.log('state = >', this.state);
                 }
               });
             });
         },
         (error) => {
+          this.permission_denied = true;
           console.log('err', error);
         }
       );
