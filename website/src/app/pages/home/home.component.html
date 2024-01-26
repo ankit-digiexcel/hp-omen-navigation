@@ -1,0 +1,153 @@
+<div class="video_main" *ngIf="step === 1">
+  <div class="video_box">
+    <video [muted]="true" [controls]="false" [autoplay]="true" (ended)="video_end()">
+      <source src="assets/video/opening_video.mp4" type="video/mp4">
+      <source src="assets/video/opening_video.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="registration_main" *ngIf="step === 2">
+  <div class="main_header">
+    <img class="my-3" width="170px" src="assets/images/logo.png" alt="Bottom">
+    <h2>go anywhere,do anything</h2>
+    <h2>with Intel® core<sup>TM</sup> <span>i7</span> processor (14th gen)</h2>
+  </div>
+  <div class="registration_box">
+    <div class="form_box">
+      <form [formGroup]="registration_form" (ngSubmit)="submit_registration()">
+        <div class="row">
+          <div class="form-group col-6">
+            <input type="text" class="form-control" id="firstName" placeholder="Name" formControlName="first_name">
+            <small
+              *ngIf="registration_form.get('first_name')?.hasError('required') && registration_form.get('first_name')?.touched"
+              class="error-message">
+              Name is required.
+            </small>
+          </div>
+          <div class="form-group col-6">
+            <input type="text" class="form-control" id="surName" placeholder="Surname" formControlName="last_name">
+            <small
+              *ngIf="registration_form.get('last_name')?.hasError('required') && registration_form.get('last_name')?.touched"
+              class="error-message">
+              Surname is required.
+            </small>
+          </div>
+          <div class="form-group col-12">
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email id"
+              formControlName="email">
+            <small
+              *ngIf="registration_form.get('email')?.hasError('required') && registration_form.get('email')?.touched"
+              class="error-message">
+              Email is required.
+            </small>
+            <small *ngIf="registration_form.get('email')?.hasError('email') && registration_form.get('email')?.touched"
+              class="error-message">
+              Invalid email format.
+            </small>
+          </div>
+          <div class="form-group col-6">
+            <input type="text" class="form-control" id="number" placeholder="Contact Number" formControlName="mobile">
+            <small
+              *ngIf="registration_form.get('mobile')?.hasError('required') && registration_form.get('mobile')?.touched"
+              class="error-message">
+              Contact number is required.
+            </small>
+            <small
+              *ngIf="registration_form.get('mobile')?.hasError('minlength') || registration_form.get('mobile')?.hasError('maxlength')"
+              class="error-message">
+              Contact number must be of 10 digits.
+            </small>
+          </div>
+          <div class="form-group col-6">
+            <input type="text" class="form-control" id="profession" placeholder="Profession"
+              formControlName="profession">
+          </div>
+          <div class="form-group col-6">
+            <select class="form-control" formControlName="state">
+              <option value="" selected>Select Your State</option>
+              <option [value]="state?.name" *ngFor="let state of states">{{state?.name}}</option>
+            </select>
+            <small
+              *ngIf="registration_form.get('state')?.hasError('required') && registration_form.get('state')?.touched"
+              class="error-message">
+              State is required.
+            </small>
+          </div>
+          <div class="form-group col-6">
+            <input type="text" class="form-control" placeholder="Enter your City" formControlName="city">
+
+            <small *ngIf="registration_form.get('city')?.hasError('required') && registration_form.get('city')?.touched"
+              class="error-message">
+              City is required.
+            </small>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <!-- <button type="submit" class="btn">Submit</button> -->
+          <button type="submit" class="btn" [disabled]="is_submiting_entry ||registration_form.invalid">
+            <i class="fas fa-spinner fa-spin mx-2" *ngIf="is_submiting_entry"></i>Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="bottom_line"></div>
+</div>
+<div class="offers_main" *ngIf="step === 3">
+  <div class="main_header">
+    <img class="my-3" width="170px" src="assets/images/logo.png" alt="Bottom">
+    <h2>go anywhere,do anything</h2>
+    <h2>with Intel® core<sup>TM</sup> <span>i7</span> processor (14th gen)</h2>
+  </div>
+  <div class="offer_title">
+    <h1>Buy OMEN laptop and get</h1>
+    <h1>HyperX Headset Free*</h1>
+  </div>
+  <div class="offer_cashback">
+    <h2>10,000 instant cashback</h2>
+    <img src="assets/images/banks.png" alt="" srcset="">
+  </div>
+  <div class="offer_benefits">
+    <div class="r_box">
+      <img src="assets/images/exchange.png" alt="" srcset="">
+      <h2>Exchange benefits upto ₹21 000<sup>#</sup></h2>
+    </div>
+    <div class="l_box">
+      <img src="assets/images/mic.png" alt="" srcset="">
+      <h2>HyperX SoloCast Mic worth <del>₹7 527.00</del> ₹499*</h2>
+    </div>
+  </div>
+  <div class="offer_moto">
+    <h2>Go Anywhere, Do Anything</h2>
+    <h2>with Intel® Core<sup>TM</sup> <span>i7</span> processor (14th Gen)</h2>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-round" (click)="to_navigation_page()">next</button>
+  </div>
+  <div class="offer_t_and_c">
+    <p>*Excusively at OMEN PLAYGROUND. T&C apply.</p>
+  </div>
+  <div class="bottom_line"></div>
+</div>
+<div class="n_main" *ngIf="step === 4">
+  <div class="main_header">
+    <img class="my-3" width="170px" src="assets/images/logo.png" alt="Bottom">
+    <h2>go anywhere,do anything</h2>
+    <h2>with Intel® core<sup>TM</sup> <span>i7</span> processor (14th gen)</h2>
+  </div>
+
+  <div class="map">
+    <img src="assets/images/map.png" alt="">
+  </div>
+
+  <div class="store">
+    <h1>Nearest OMEN PLAYGROUND Store</h1>
+    <p>Ground Floor First Floor, Shop No.16 & 17, Giri Apartment, near 45th Cross, JP Nagar Phase 2, Bengaluru,
+      Karnataka 560078, India</p>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-round"><span class="icon_btn"><img src="assets/images/direction.png"
+          height="18px" style="margin-right: 10px;" alt="">start
+        navigation</span></button>
+  </div>
+  <div class="bottom_line"></div>
+</div>
