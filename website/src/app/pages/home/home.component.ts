@@ -10,7 +10,7 @@ import { AppService } from 'src/app/app.service';
 export class HomeComponent {
   public states: any = [];
   public is_submiting_entry: boolean = false;
-  public step: number = 3;
+  public step: number = 1;
 
   public registration_form = this.form_builder.group({
     first_name: ['', [Validators.required]],
