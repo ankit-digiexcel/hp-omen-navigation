@@ -13,7 +13,7 @@ export class AppService {
   private location_api_url = 'https://api.countrystatecity.in/v1/countries/IN/';
   private api_endpoint = this.platformLocation.href.includes('localhost')
     ? 'http://localhost:5000/api/v1/'
-    : 'https://hpspectrex360.com/api/v1/';
+    : 'https://hp-omen-navigation.onrender.com/api/v1/';
 
   private token: any;
   private authStatusListener = new Subject<boolean>();
