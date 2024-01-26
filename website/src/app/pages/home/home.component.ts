@@ -8,6 +8,7 @@ import { AppService } from 'src/app/app.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  public is_iphone: boolean = false;
   public states: any = [];
   public is_submiting_entry: boolean = false;
   public step: number = 1;
@@ -33,6 +34,8 @@ export class HomeComponent {
       this.states = this.sortByName(states);
       console.log(this.states);
     });
+    const platform = navigator.platform.toLowerCase();
+    this.is_iphone = platform.includes('iphone');
   }
 
   video_end() {

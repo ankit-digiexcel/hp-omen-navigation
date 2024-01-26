@@ -1,10 +1,15 @@
 <div class="video_main" *ngIf="step === 1">
   <div class="video_box">
-    <video [muted]="true" [controls]="false" [autoplay]="true" (ended)="video_end()">
+    <video [muted]="true" playsinline [controls]="is_iphone" [autoplay]="true" (ended)="video_end()">
       <source src="assets/video/opening_video.mp4" type="video/mp4">
       <source src="assets/video/opening_video.mp4" type="video/mp4">
     </video>
   </div>
+  <div class="text-center my-3" *ngIf="is_iphone">
+    <button type="button" class="btn btn-round" (click)="video_end()">procced</button>
+  </div>
+  <div class="bottom_line" *ngIf="is_iphone"></div>
+
 </div>
 <div class="registration_main" *ngIf="step === 2">
   <div class="main_header">
