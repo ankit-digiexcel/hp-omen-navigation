@@ -10,6 +10,10 @@ import Swal from 'sweetalert2';
   providedIn: 'root',
 })
 export class AppService {
+  public mapbox = {
+    accessToken:
+      'pk.eyJ1IjoiYW5raXQtZGlnaWV4Y2VsIiwiYSI6ImNscnVmbjRweTBmejQyamxtc3Vwb3R2bDAifQ.N80ROTSHUmtUaj5HAShrHA',
+  };
   private location_api_url = 'https://api.countrystatecity.in/v1/countries/IN/';
   private api_endpoint = this.platformLocation.href.includes('localhost')
     ? 'http://localhost:5000/api/v1/'
@@ -60,6 +64,17 @@ export class AppService {
 
   getCities(iso2: any) {
     return this.http.get(this.location_api_url + 'states/' + iso2 + '/cities');
+  }
+
+  reverseGeocoding(longitude: any, latitude: any) {
+    return this.http.get(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${this.mapbox.accessToken}`
+    );
+  }
+  getGeocoding(search: string) {
+    return this.http.get(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${search}.json?access_token=${this.mapbox.accessToken}`
+    );
   }
 
   /**

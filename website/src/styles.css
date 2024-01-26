@@ -262,3 +262,12 @@ img {
   margin: auto;
   margin-top: 20px;
 }
+
+.custom-marker {
+  background-image: url("assets//images//marker.png"); /* Replace with the path to your custom pointer image */
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
